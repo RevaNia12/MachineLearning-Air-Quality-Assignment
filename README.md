@@ -49,3 +49,6 @@ Dashboard akan terbuka di browser dan menampilkan visualisasi dari dataset.
 Proyek ini menunjukkan proses end-to-end data analysis, mulai dari data mentah hingga penyampaian
 insight melalui dashboard. Visualisasi data dan EDA membantu memahami pola serta hubungan antar variabel
 untuk mendukung pengambilan keputusan berbasis data.
+
+## Dokumentasi Dashboard
+
