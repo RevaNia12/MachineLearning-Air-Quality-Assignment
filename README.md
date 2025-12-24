@@ -36,7 +36,7 @@ pip install -r requirements.txt
 Buka file Notebook.ipynb menggunakan jupyter notebook untuk melihat proses analisis dan eksplorasi data.
 ### 3. Menjalankan Dashboard Streamlit
 streamlit run dashboard.py
-Dashboard akan terbuka di browser dan menampilkan visualisasi dari dataset.
+Dashboard akan terbuka di browser lokal dan menampilkan visualisasi dari dataset.
 
 ## Insight Utama
 
