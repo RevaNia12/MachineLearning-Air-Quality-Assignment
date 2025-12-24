@@ -2,7 +2,7 @@
 
 ## Deskripsi Proyek
 Proyek ini bertujuan untuk melakukan analisis data secara end-to-end menggunakan **Air Quality Dataset**.
-Analisis dilakukan mulai dari data preparation, exploratory data analysis (EDA), hingga penyampaian insight
+Analisis dilakukan mulai dari data preparation, exploratory data analysis (EDA), dan penyampaian insight
 melalui visualisasi data. Proyek ini dibuat untuk memenuhi tugas **Machine Learning Assignment**.
 
 ## Dataset
@@ -28,4 +28,24 @@ Dataset yang digunakan adalah **Air Quality Dataset**, yang berisi informasi men
    - requirements.txt
    - README.md
 
- ## Cara Menjalankan
+ ## Cara Menjalankan Proyek
+ ### 1. Install dependency
+Pastikan Python sudah terpasang, lalu jalankan:
+pip install -r requirements.txt
+### 2. Menjalankan Notebook
+Buka file Notebook.ipynb menggunakan jupyter notebook untuk melihat proses analisis dan eksplorasi data.
+### 3. Menjalankan Dashboard Streamlit
+streamlit run dashboard.py
+Dashboard akan terbuka di browser dan menampilkan visualisasi dari dataset.
+
+## Insight Utama
+
+- Suhu udara memiliki korelasi positif dengan beberapa polutan seperti CO dan NO2.
+- Kelembapan relatif (RH) memiliki korelasi negatif yang kuat terhadap suhu.
+- Faktor cuaca berperan penting dalam dinamika kualitas udara.
+
+## Kesimpulan
+
+Proyek ini menunjukkan proses end-to-end data analysis, mulai dari data mentah hingga penyampaian
+insight melalui dashboard. Visualisasi data dan EDA membantu memahami pola serta hubungan antar variabel
+untuk mendukung pengambilan keputusan berbasis data.
