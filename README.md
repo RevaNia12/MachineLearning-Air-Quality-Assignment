@@ -52,8 +52,6 @@ untuk mendukung pengambilan keputusan berbasis data.
 
 ## Dokumentasi Dashboard
 <img width="1878" height="864" alt="Screenshot 2025-12-27 163821" src="https://github.com/user-attachments/assets/50758f0c-1500-4b80-afbd-cde84cdf72d7" />
-<img width="1799" height="575" alt="image" src="https://github.com/user-attachments/assets/d210a00e-1120-4833-a216-da8163739d1c" />
-<img width="1875" height="873" alt="image" src="https://github.com/user-attachments/assets/35697dee-6e38-43a3-b7cd-eba53683d968" />
 
 
 
