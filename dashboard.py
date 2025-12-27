@@ -40,27 +40,27 @@ st.markdown("---")
 # ======================
 left, right = st.columns(2)
 
-# LINE CHART
+# Diagram Garis
 with left:
-    st.subheader("📈 Temperature Trend")
+    st.subheader("📈 Pola Perubahan Suhu")
     fig, ax = plt.subplots()
-    ax.plot(df["Datetime"], df["T"])
-    ax.set_xlabel("Time")
-    ax.set_ylabel("Temperature (°C)")
+    ax.plot(df["Tanggal dan Waktu"], df["T"])
+    ax.set_xlabel("Waktu")
+    ax.set_ylabel("Suhu (°C)")
     st.pyplot(fig)
     st.caption(
         "Keterangan: Terlihat adanya fluktuasi suhu sepanjang waktu, "
         "yang mengindikasikan pola harian dan perubahan kondisi lingkungan."
     )
 
-# BAR CHART
+# Diagram Batang
 with right:
-    st.subheader("📊 Average Pollutant Levels")
+    st.subheader("📊 Rata-rata Tingkat Polutan")
     avg_pollution = df[["CO(GT)", "NO2(GT)", "NOx(GT)"]].mean()
-    avg_pollution.index.name = "Pollutant"
+    avg_pollution.index.name = "Polutan"
     fig, ax = plt.subplots()
     sns.barplot(x=avg_pollution.index, y=avg_pollution.values, ax=ax)
-    ax.set_ylabel("Average Value")
+    ax.set_ylabel("Rata-rata")
     st.pyplot(fig)
     dominant_pollutant = avg_pollution.idxmax()
     st.caption(
@@ -72,7 +72,7 @@ with right:
 # ======================
 # PIE CHART
 # ======================
-st.subheader("Pollution Composition")
+st.subheader("Komposisi Polutan")
 pollution_cols = ["CO(GT)", "NO2(GT)", "NOx(GT)"]
 
 pie_data = df[pollution_cols].replace(-200, pd.NA)
@@ -125,6 +125,7 @@ st.info(
     🔹 **NO₂ rata-rata** sebesar **{avg_no2:.2f}**, yang berpotensi berdampak pada kualitas udara dan kesehatan.
     """
 )
+
 
 
 
