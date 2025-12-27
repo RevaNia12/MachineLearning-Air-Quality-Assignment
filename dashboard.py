@@ -48,6 +48,12 @@ with left:
     ax.set_xlabel("Time")
     ax.set_ylabel("Temperature (°C)")
     st.pyplot(fig)
+st.markdown(
+    """
+    **Insight:**  
+    Terlihat adanya fluktuasi suhu sepanjang waktu, yang mengindikasikan pola harian dan perubahan kondisi lingkungan.
+    """
+)
 
 # BAR CHART
 with right:
@@ -85,8 +91,10 @@ ax.pie(
     labels=pie_data.index,
     autopct="%1.1f%%",
     startangle=90,
-    radius=0.5,
-    textprops={"fontsize": 7},                    
+    radius=0.7,      
+    textprops={"fontsize": 7},  
+    abeldistance=1.05,             
+    pctdistance=0.65, 
     wedgeprops={"edgecolor": "white"}
 )
 ax.axis("equal")
@@ -123,10 +131,6 @@ st.info(
     🔹 **NO₂ rata-rata** sebesar **{avg_no2:.2f}**, yang berpotensi berdampak pada kualitas udara dan kesehatan.
     """
 )
-st.markdown(
-    """
-    **Insight:**  
-    Terlihat adanya fluktuasi suhu sepanjang waktu, yang mengindikasikan pola harian dan perubahan kondisi lingkungan.
-    """
-)
+
+
 
