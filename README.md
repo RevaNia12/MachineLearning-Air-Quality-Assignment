@@ -3,7 +3,7 @@
 ## Deskripsi Proyek
 Proyek ini bertujuan untuk melakukan analisis data secara end-to-end menggunakan **Air Quality Dataset**.
 Analisis dilakukan mulai dari data preparation, exploratory data analysis (EDA), dan penyampaian insight
-melalui visualisasi data. Proyek ini dibuat untuk memenuhi tugas **Machine Learning Assignment**.
+melalui visualisasi data. Proyek ini dibuat untuk memenuhi tugas submission **Machine Learning Assignment** oleh GDGoC.
 
 ## Dataset
 Dataset yang digunakan adalah **Air Quality Dataset**, yang berisi informasi mengenai:
@@ -17,8 +17,7 @@ Dataset yang digunakan adalah **Air Quality Dataset**, yang berisi informasi men
 - NumPy
 - Matplotlib
 - Seaborn
-- Scikit-learn (opsional)
-- Streamlit (opsional)
+- Streamlit 
 
 ## Struktur Folder
    - data
