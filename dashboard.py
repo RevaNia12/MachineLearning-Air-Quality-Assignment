@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 st.title("🌍 Air Quality Dashboard")
-st.markdown("Dashboard kualitas udara berbasis data **AirQualityUCI**")
+st.markdown("Dashboard kualitas udara berbasis data **AirQualityUCI** pada tahun 2004-2005")
 
 # ======================
 # LOAD DATA
@@ -49,7 +49,7 @@ with left:
     ax.set_ylabel("Temperature (°C)")
     st.pyplot(fig)
     st.caption(
-        "Insight: Terlihat adanya fluktuasi suhu sepanjang waktu, "
+        "Keterangan: Terlihat adanya fluktuasi suhu sepanjang waktu, "
         "yang mengindikasikan pola harian dan perubahan kondisi lingkungan."
     )
 
@@ -64,7 +64,7 @@ with right:
     st.pyplot(fig)
     dominant_pollutant = avg_pollution.idxmax()
     st.caption(
-        "Insight: NOx(GT) memiliki nilai rata-rata tertinggi, "
+        "Keterangan: NOx(GT) memiliki nilai rata-rata tertinggi, "
         "sehingga menjadi kontributor utama terhadap penurunan kualitas udara."
     )
 
@@ -96,7 +96,7 @@ ax.axis("equal")
 st.pyplot(fig)
 st.markdown(
     """
-    **Insight:**  
+    **Keterangan:**  
     Komposisi polutan menunjukkan bahwa beberapa gas memiliki kontribusi lebih dominan, sehingga perlu menjadi fokus utama dalam upaya pengendalian kualitas udara.
     """
 )
@@ -106,13 +106,13 @@ st.markdown(
 # ======================
 # DATA TABLE
 # ======================
-st.subheader("📄 Raw Data Preview")
+st.subheader("Tampilan Awal Data Mentah")
 st.dataframe(df.head(50))
 
 # ======================
 # INSIGHT SECTION
 # ======================
-st.subheader("📌 Key Insights")
+st.subheader("Kesimpulan")
 
 avg_temp = df["T"].mean()
 avg_co = df["CO(GT)"].mean()
@@ -125,6 +125,7 @@ st.info(
     🔹 **NO₂ rata-rata** sebesar **{avg_no2:.2f}**, yang berpotensi berdampak pada kualitas udara dan kesehatan.
     """
 )
+
 
 
 
