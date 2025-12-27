@@ -48,12 +48,10 @@ with left:
     ax.set_xlabel("Time")
     ax.set_ylabel("Temperature (°C)")
     st.pyplot(fig)
-st.markdown(
-    """
-    **Insight:**  
-    Terlihat adanya fluktuasi suhu sepanjang waktu, yang mengindikasikan pola harian dan perubahan kondisi lingkungan.
-    """
-)
+    st.caption(
+        "Insight: Terlihat adanya fluktuasi suhu sepanjang waktu, "
+        "yang mengindikasikan pola harian dan perubahan kondisi lingkungan."
+    )
 
 # BAR CHART
 with right:
@@ -63,16 +61,11 @@ with right:
     sns.barplot(x=avg_pollution.index, y=avg_pollution.values, ax=ax)
     ax.set_ylabel("Average Value")
     st.pyplot(fig)
-
-st.markdown("---")
-dominant_pollutant = avg_pollution.idxmax()
-
-st.markdown(
-    f"""
-    **Insight:**  
-    Polutan dengan nilai rata-rata tertinggi adalah **{dominant_pollutant}**, sehingga menjadi kontributor utama terhadap penurunan kualitas udara.
-    """
-)
+    dominant_pollutant = avg_pollution.idxmax()
+    st.caption(
+        "Insight: NOx(GT) memiliki nilai rata-rata tertinggi, "
+        "sehingga menjadi kontributor utama terhadap penurunan kualitas udara."
+    )
 
 
 # ======================
@@ -131,6 +124,7 @@ st.info(
     🔹 **NO₂ rata-rata** sebesar **{avg_no2:.2f}**, yang berpotensi berdampak pada kualitas udara dan kesehatan.
     """
 )
+
 
 
 
