@@ -59,6 +59,15 @@ with right:
     st.pyplot(fig)
 
 st.markdown("---")
+dominant_pollutant = avg_pollution.idxmax()
+
+st.markdown(
+    f"""
+    **Insight:**  
+    Polutan dengan nilai rata-rata tertinggi adalah **{dominant_pollutant}**, sehingga menjadi kontributor utama terhadap penurunan kualitas udara.
+    """
+)
+
 
 # ======================
 # PIE CHART
@@ -83,6 +92,13 @@ ax.pie(
 ax.axis("equal")
 
 st.pyplot(fig)
+st.markdown(
+    """
+    **Insight:**  
+    Komposisi polutan menunjukkan bahwa beberapa gas memiliki kontribusi lebih dominan, sehingga perlu menjadi fokus utama dalam upaya pengendalian kualitas udara.
+    """
+)
+
 
 
 # ======================
@@ -90,3 +106,27 @@ st.pyplot(fig)
 # ======================
 st.subheader("📄 Raw Data Preview")
 st.dataframe(df.head(50))
+
+# ======================
+# INSIGHT SECTION
+# ======================
+st.subheader("📌 Key Insights")
+
+avg_temp = df["T"].mean()
+avg_co = df["CO(GT)"].mean()
+avg_no2 = df["NO2(GT)"].mean()
+
+st.info(
+    f"""
+    🔹 **Suhu rata-rata** selama periode pengamatan adalah **{avg_temp:.2f} °C**.  
+    🔹 **Kadar CO rata-rata** berada di angka **{avg_co:.2f}**, menunjukkan tingkat polusi gas karbon monoksida yang cukup konsisten.  
+    🔹 **NO₂ rata-rata** sebesar **{avg_no2:.2f}**, yang berpotensi berdampak pada kualitas udara dan kesehatan.
+    """
+)
+st.markdown(
+    """
+    **Insight:**  
+    Terlihat adanya fluktuasi suhu sepanjang waktu, yang mengindikasikan pola harian dan perubahan kondisi lingkungan.
+    """
+)
+
