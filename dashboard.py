@@ -57,6 +57,7 @@ with left:
 with right:
     st.subheader("📊 Average Pollutant Levels")
     avg_pollution = df[["CO(GT)", "NO2(GT)", "NOx(GT)"]].mean()
+    avg_pollution.index.name = "Pollutant"
     fig, ax = plt.subplots()
     sns.barplot(x=avg_pollution.index, y=avg_pollution.values, ax=ax)
     ax.set_ylabel("Average Value")
@@ -86,7 +87,7 @@ ax.pie(
     startangle=90,
     radius=0.7,      
     textprops={"fontsize": 7},  
-    abeldistance=1.05,             
+    labeldistance=1.05,             
     pctdistance=0.65, 
     wedgeprops={"edgecolor": "white"}
 )
@@ -124,6 +125,7 @@ st.info(
     🔹 **NO₂ rata-rata** sebesar **{avg_no2:.2f}**, yang berpotensi berdampak pada kualitas udara dan kesehatan.
     """
 )
+
 
 
 
