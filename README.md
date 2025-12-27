@@ -51,4 +51,6 @@ insight melalui dashboard. Visualisasi data dan EDA membantu memahami pola serta
 untuk mendukung pengambilan keputusan berbasis data.
 
 ## Dokumentasi Dashboard
+<img width="1878" height="864" alt="Screenshot 2025-12-27 163821" src="https://github.com/user-attachments/assets/50758f0c-1500-4b80-afbd-cde84cdf72d7" />
+
 
