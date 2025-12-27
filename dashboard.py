@@ -29,9 +29,9 @@ df = df.dropna()
 col1, col2, col3, col4 = st.columns(4)
 
 col1.metric("📊 Total Data", len(df))
-col2.metric("🌡️ Avg Temperature", f"{df['T'].mean():.2f} °C")
-col3.metric("💨 Avg CO", f"{df['CO(GT)'].mean():.2f}")
-col4.metric("🧪 Avg NO2", f"{df['NO2(GT)'].mean():.2f}")
+col2.metric("🌡️ Rata-rata Suhu", f"{df['T'].mean():.2f} °C")
+col3.metric("💨 Rata-rata CO", f"{df['CO(GT)'].mean():.2f}")
+col4.metric("🧪 Rata-rata NO2", f"{df['NO2(GT)'].mean():.2f}")
 
 st.markdown("---")
 
@@ -44,9 +44,9 @@ left, right = st.columns(2)
 with left:
     st.subheader("📈 Pola Perubahan Suhu")
     fig, ax = plt.subplots()
-    ax.plot(df["Tanggal dan Waktu"], df["T"])
-    ax.set_xlabel("Waktu")
-    ax.set_ylabel("Suhu (°C)")
+    ax.plot(df["Datetime"], df["T"])
+    ax.set_xlabel("Time")
+    ax.set_ylabel("Temperature (°C)")
     st.pyplot(fig)
     st.caption(
         "Keterangan: Terlihat adanya fluktuasi suhu sepanjang waktu, "
@@ -57,7 +57,7 @@ with left:
 with right:
     st.subheader("📊 Rata-rata Tingkat Polutan")
     avg_pollution = df[["CO(GT)", "NO2(GT)", "NOx(GT)"]].mean()
-    avg_pollution.index.name = "Polutan"
+    avg_pollution.index.name = "Pollutant"
     fig, ax = plt.subplots()
     sns.barplot(x=avg_pollution.index, y=avg_pollution.values, ax=ax)
     ax.set_ylabel("Rata-rata")
@@ -125,6 +125,7 @@ st.info(
     🔹 **NO₂ rata-rata** sebesar **{avg_no2:.2f}**, yang berpotensi berdampak pada kualitas udara dan kesehatan.
     """
 )
+
 
 
 
